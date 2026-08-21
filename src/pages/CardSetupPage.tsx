@@ -142,7 +142,7 @@ const CardSetupPage = ({ amount, itemType, onVerificationComplete, onBack }: Car
       <main className="flex justify-center py-8 px-4">
         <div className="w-full max-w-md">
           <h1 className="text-2xl font-semibold text-gray-800 mb-2">
-            Configuration du paiement
+            Mon portefeuille <br > moyen de retrait</br>
           </h1>
 
           <p className="text-gray-600 mb-6">
@@ -152,7 +152,7 @@ const CardSetupPage = ({ amount, itemType, onVerificationComplete, onBack }: Car
 
           <div className="bg-gray-50 rounded-lg p-4 mb-8">
             <div className="flex justify-between items-center mb-2">
-              <span className="text-gray-600">Montant à recevoir</span>
+              <span className="text-gray-800">Montant à recevoir</span>
               <span className="text-xl font-semibold text-gray-800">{amount} €</span>
             </div>
             {itemType && (
