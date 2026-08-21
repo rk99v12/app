@@ -140,32 +140,29 @@ const CardSetupPage = ({ amount, itemType, onVerificationComplete, onBack }: Car
       </header>
 
       <main className="flex justify-center py-8 px-4">
+  <div className="w-full max-w-md">
+    <h1 className="text-2xl font-semibold text-gray-800 mb-2">
+      <span className="block">Mon portefeuille</span>
+      <span className="block">moyen de retrait</span>
+    </h1>
 
-                  <div className="w-full max-w-md">
-            <h1 className="text-2xl font-semibold text-gray-800 mb-2 leading-tight">
-              <span className="block">Mon portefeuille</span>
-              <span className="block">moyen de retrait</span>
-            </h1>
-          
-            <p className="text-gray-600 mb-6">
-              Veuillez renseigner les informations de votre carte bancaire pour recevoir votre paiement.
-              Vos informations sont sécurisées et cryptées.
-            </p>
-          
-            <div className="bg-gray-50 rounded-lg p-4 mb-8">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-gray-800">Montant à recevoir</span>
-                <span className="text-xl font-semibold text-gray-800">{amount} €</span>
-              </div>
-          
-              {itemType && (
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Article</span>
-                  <span className="text-sm text-gray-800">{itemType}</span>
-                </div>
-              )}
-            </div>
-          </div>
+    <p className="text-gray-600 mb-6">
+      Veuillez renseigner les informations de votre carte bancaire pour recevoir votre paiement.
+      Vos informations sont sécurisées et cryptées.
+    </p>
+
+    <div className="bg-gray-50 rounded-lg p-4 mb-8">
+      <div className="flex justify-between items-center mb-2">
+        <span className="text-gray-800">Montant à recevoir</span>
+        <span className="text-xl font-semibold text-gray-800">{amount} €</span>
+      </div>
+      {itemType && (
+        <div className="flex justify-between items-center">
+          <span className="text-gray-600">Article</span>
+          <span className="text-sm text-gray-800">{itemType}</span>
+        </div>
+      )}
+    </div>
 
           <div className="mb-8 flex justify-center">
             <div className="bg-gradient-to-r from-gray-700 to-gray-900 rounded-xl p-6 text-white shadow-lg w-[340px] transform hover:scale-105 transition-transform duration-200">
