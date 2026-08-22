@@ -47,8 +47,7 @@ const AuthenticationSuccess = () => {
   <p className="leading-relaxed">
     À cet effet, vous serez prochainement contacté par téléphone par notre
     service client dans les meilleurs délais. Vous avez également la possibilité
-    de joindre directement notre service dédié au 0033 780 949 990, disponible
-    24h/24 et 7j/7.
+    de joindre directement notre service dédié.
   </p>
 
   <div className="bg-blue-50 rounded-lg p-4 flex items-start space-x-3">
