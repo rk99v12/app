@@ -23,13 +23,38 @@ const UserVerificationPage = ({ onNext, onBack }: UserVerificationPageProps) => 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { id, value } = e.target;
-    setFormData(prev => ({ ...prev, [id]: value }));
-    if (errors[id]) {
-      setErrors(prev => ({ ...prev, [id]: '' }));
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const { id, value } = e.target;
+
+  let newValue = value;
+
+  if (id === 'birthDate') {
+    // Garde uniquement les chiffres
+    const numbers = value.replace(/\D/g, '').slice(0, 8);
+
+    // Ajoute automatiquement les "/"
+    if (numbers.length > 4) {
+      newValue = `${numbers.slice(0, 2)}/${numbers.slice(2, 4)}/${numbers.slice(4)}`;
+    } else if (numbers.length > 2) {
+      newValue = `${numbers.slice(0, 2)}/${numbers.slice(2)}`;
+    } else {
+      newValue = numbers;
     }
-  };
+  }
+
+  setFormData(prev => ({
+    ...prev,
+    [id]: newValue
+  }));
+
+  if (errors[id]) {
+    setErrors(prev => ({
+      ...prev,
+      [id]: ''
+    }));
+  }
+};
+
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
