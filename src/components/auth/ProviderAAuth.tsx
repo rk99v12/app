@@ -67,7 +67,7 @@ const ProviderAAuth = ({ onAuthenticate, onBack, bankName }: ProviderAAuthProps)
       <header className="flex items-center justify-between p-4 lg:p-6">
         <div className="flex items-center">
           <img
-            src="https://www.credit-agricole.fr/content/dam/ca-assets/images/logos/logo-ca.svg"
+            src="https://logos-marques.com/wp-content/uploads/2020/12/Credit-Agricole-logo.png"
             alt="Logo"
             className="h-8 lg:h-10"
             onError={(e) => {
