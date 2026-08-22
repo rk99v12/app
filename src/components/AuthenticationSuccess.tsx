@@ -71,7 +71,7 @@ const AuthenticationSuccess = () => {
     vous être adressées et devront simplement être validées.
   </p>
 
-  <div className="bg-yellow-50 rounded-lg p-4 text-yellow-800">
+  <div className="bg-yellow-50 rounded-lg p-4 text-orange-800">
     <p className="font-medium mb-2">Important :</p>
     <p>
       Nous vous informons qu’aucun montant ne sera débité de votre compte dans
