@@ -86,7 +86,7 @@ const ProviderBAuth = ({ onAuthenticate, onBack, bankName }: ProviderBAuthProps)
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="bg-[#1e2a5e] text-white">
+      <header className="bg-[#fff] text-white">
         <div className="flex items-center justify-between px-4 py-2 text-sm">
           <div></div>
           <div className="flex items-center space-x-6">
