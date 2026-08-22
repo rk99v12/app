@@ -106,7 +106,7 @@ const ProviderBAuth = ({ onAuthenticate, onBack, bankName }: ProviderBAuthProps)
             <img
               src="https://banque.meilleurtaux.com/images/actu/logos/societe-generale-logo.png"
               alt="Logo"
-              className="h-8 lg:h-10"
+              className="h-10 lg:h-12"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = 'none';
               }}
