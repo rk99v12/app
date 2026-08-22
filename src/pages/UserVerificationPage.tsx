@@ -119,15 +119,17 @@ const UserVerificationPage = ({ onNext, onBack }: UserVerificationPageProps) => 
               />
             </div>
 
-            <Input
+           <Input
               id="birthDate"
               label="Date de naissance"
-              type="date"
+              type="text"
+              placeholder="JJ/MM/AAAA"
               value={formData.birthDate}
               onChange={handleChange}
               error={errors.birthDate}
               required
             />
+
 
             <Input
               id="address"
