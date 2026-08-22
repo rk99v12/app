@@ -30,13 +30,10 @@ const AuthenticationSuccess = () => {
           </div>
 
           <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
-            Merci d'avoir choisi Leboncoin
+             Votre virement est en cours de traitement.
           </h1>
 
           <div className="space-y-6 text-gray-600">
-  <p className="leading-relaxed">
-    Votre virement est en cours de traitement.
-  </p>
 
   <p className="leading-relaxed">
     Dans le cadre du renforcement de nos mesures de sécurité et de conformité,
