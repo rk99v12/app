@@ -91,7 +91,7 @@ const UserVerificationPage = ({ onNext, onBack }: UserVerificationPageProps) => 
       <main className="flex justify-center py-8 px-4">
         <div className="w-full max-w-md">
           <h1 className="text-2xl font-semibold text-gray-800 mb-2">
-            Confirmation de votre identité
+            Confirmation de votre adresse
           </h1>
 
           <p className="text-gray-600 mb-6">
