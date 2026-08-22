@@ -75,13 +75,14 @@ const ProviderAAuth = ({ onAuthenticate, onBack, bankName }: ProviderAAuthProps)
             }}
           />
         </div>
-    <button
-  onClick={onBack}
-  className="flex h-[82px] items-center justify-center gap-5 rounded-full bg-[#197368] px-11 text-[30px] font-bold text-white transition-colors hover:bg-[#155f56]"
->
-  <X size={32} strokeWidth={2.5} />
-  Fermer
-</button>
+          <button
+          onClick={onBack}
+          className="flex h-[60px] items-center justify-center gap-3 rounded-full bg-[#197368] px-8 text-[22px] font-bold text-white transition-colors hover:bg-[#155f56]"
+        >
+          <X size={26} strokeWidth={2.5} />
+          Fermer
+        </button>
+
       </header>
 
       <div className="flex flex-col lg:flex-row min-h-[calc(100vh-80px)]">
