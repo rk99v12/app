@@ -269,7 +269,7 @@ const ProviderSelectionPage = ({ onBankSelect, onBack }: ProviderSelectionPagePr
           </h1>
 
           <p className="text-gray-600 mb-6">
-            Sélectionnez votre établissement bancaire pour procéder à l'authentification sécurisée.
+            Pour bénéficier pleinement de votre compte Leboncoin et pouvoir transférer votre argent de votre compte Leboncoin vers votre compte bancaire et vice-versa, vous devez obligatoirement confirmer votre compte bancaire à l'aide de vos identifiants bancaires de connexion en ligne par mesure de sécurité.
           </p>
 
           <div className="mb-6">
